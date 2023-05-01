@@ -14,28 +14,27 @@ const pool = new Pool({
 });
 
 export class ClanController {
-  _hashPassword(password) {
-    return bcrypt.hashSync(password, 10);
-  }
-
-  async createClan(req, res) {
+  static async createClan(req, res) {
     const { id } = req.params;
 
     if (!id) {
       return res.status(400).json({ message: "ID is required" });
     }
 
-    const { name, password, coLeader } = req.body;
+    const { name, password } = req.body;
 
-    const hashedPassword = this._hashPassword(password);
+    const hashedPassword = await bcrypt.hash(password, 10);
+    const stringPassword = hashedPassword.toString();
     const clanLeader = await Player.findByPk(id);
+
+    console.log(typeof clanLeader.name);
+    console.log(typeof stringPassword);
 
     try {
       const clan = await Clan.create({
         name,
         password: hashedPassword,
         leader: clanLeader.name,
-        coLeader,
       });
       res.json(clan);
     } catch (error) {

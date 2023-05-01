@@ -1,6 +1,6 @@
 import { DataTypes } from "sequelize";
 import { sequelize } from "../database/database.js";
-import Clan from "./Clan.js";
+import { Clan } from "./Clan.js";
 
 export const Player = sequelize.define(
   "player",
