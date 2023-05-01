@@ -1,9 +1,7 @@
 import dotenv from "dotenv";
+dotenv.config();
 import App from "./app.js";
 import { sequelize } from "./database/database.js";
-
-dotenv.config();
-import "./models/Player.js";
 
 async function main() {
   try {

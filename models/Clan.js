@@ -1,10 +1,9 @@
 import { DataTypes } from "sequelize";
 import { sequelize } from "../database/database.js";
-import Clan from "./Clan.js";
+import { Player } from "./Player.js";
 
-export const Player = sequelize.define(
-  "player",
-  {
+const defineClan = (sequelize) => {
+  const Clan = sequelize.define("clan", {
     id: {
       type: DataTypes.INTEGER,
       autoIncrement: true,
@@ -15,27 +14,22 @@ export const Player = sequelize.define(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    level: {
+    password: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    leader: {
       type: DataTypes.INTEGER,
       allowNull: false,
     },
-    rank: {
+    coLeader: {
       type: DataTypes.INTEGER,
-      allowNull: false,
     },
-    winrate: {
-      type: DataTypes.FLOAT,
-      allowNull: false,
-    },
-    clanId: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: Clan,
-        key: "id",
-      },
-    },
-  },
-  {
-    timestamps: false,
-  }
-);
+  });
+
+  return Clan;
+};
+
+const Clan = defineClan(sequelize);
+
+export default Clan;
