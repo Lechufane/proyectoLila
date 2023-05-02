@@ -21,10 +21,8 @@ export class ClanController {
       return res.status(400).json({ message: "ID is required" });
     }
 
-    const player = await Player.findByPk(id);
-
     try {
-      const clan = await Clan.findOne({ where: { id: player.clanId } });
+      const clan = await Clan.findByPk(id);
 
       if (!clan) {
         return res.status(404).json({ message: "Clan not found" });
@@ -96,32 +94,39 @@ export class ClanController {
   }
 
   static async assignCoLeader(req, res) {
-    const { id } = req.params;
+    const { id } = req.params; //utilizamos el id del jugador que hace la peticion
+
+    const { coLeader } = req.body; //utilizamos el nombre del jugador que queremos que sea co-lider
 
     if (!id) {
+      //si no hay id en la peticion devolvemos un error
       return res.status(400).json({ message: "ID is required" });
     }
 
-    const leader = await Player.findByPk(id);
+    const leader = await Player.findByPk(id); //buscamos al jugador que hace la peticion
 
-    const { coLeader } = req.body;
+    if (!leader.clanId) {
+      //si el jugador no tiene clan devolvemos un error porque no puede asignar co-lider a nadie si no tiene clan para empezar.
+      return res.status(404).json({ message: "You have no clan yet." });
+    }
 
-    const validCoLeader = await Player.findOne({ where: { name: coLeader } });
+    const validCoLeader = await Player.findOne({ where: { name: coLeader } }); //Buscamos al jugador que queremos que sea co-lider por su nombre
 
     if (!validCoLeader) {
+      //si no existe el jugador que queremos que sea co-lider devolvemos un error
       return res.status(404).json({ message: "Player not found" });
     }
 
     try {
-      const clan = await Clan.findOne({ where: { leader: leader.name } });
+      const clan = await Clan.findOne({ where: { leader: leader.name } }); //buscamos el clan del jugador que hace la peticion
 
       if (!clan) {
-        return res.status(404).json({ message: "You have no clan yet." });
+        return res.status(404).json({ message: "You are not the leader" }); //si el jugador que hace la peticion no es el lider devolvemos un error
       }
 
-      clan.coLeader = validCoLeader.name;
+      clan.coLeader = validCoLeader.name; //asignamos el nombre del co-lider al clan
       clan.save();
-      validCoLeader.clanId = clan.id;
+      validCoLeader.clanId = clan.id; //asignamos el id del clan al co-lider
       validCoLeader.save();
 
       res.json(clan);

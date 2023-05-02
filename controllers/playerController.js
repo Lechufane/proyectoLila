@@ -14,6 +14,8 @@ export class PlayerController {
   static async getPlayer(req, res) {
     const { id } = req.params;
 
+    if (!id) return res.status(400).json({ message: "ID is required" });
+
     try {
       const player = await Player.findByPk(id);
       res.status(200).json(player);
@@ -106,7 +108,7 @@ export class PlayerController {
       };
       const { rows } = await pool.query(query);
 
-      res.json({ similarPlayers: rows });
+      res.json(rows);
     } catch (error) {
       res.status(500).json({ message: error.message });
     }
