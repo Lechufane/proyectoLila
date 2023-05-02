@@ -71,6 +71,16 @@ Los endpoints disponibles son los siguientes:
 
 ### Clanes
 
+```
+
+Contraseñas de los clanes:
+
+snakes:samurai25
+dragon:anarquia04
+bears:mustafa123
+
+```
+
 - `GET clans/:id` : Obtiene los datos de un clan segun el id del clan, incluyendo los jugadores que pertenecen a el.
 
 - `POST clans/:id/create` : Crea un clan. Recibe un objeto con el valor `name` y `password`, el jugador que crea el clan pasa a tener dicho clan vinculado en la columna `clanId` de la base de datos y en el la tabla de clanes pasa a aparecer su nombre en la tabla `leader`.
