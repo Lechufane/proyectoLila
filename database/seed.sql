@@ -1,13 +1,13 @@
 INSERT INTO public.clans ("name","password",leader,"coLeader","createdAt","updatedAt") VALUES
-	 ('bear','$2b$10$z2heauzXO1VNG4R01EK4IeYdVfjE8fySVjv3NBFd.tX2jpFRTv7r2','Player1',NULL,'2023-05-01 14:47:47.158-03','2023-05-01 14:47:47.158-03'),
-	 ('dragon','$2b$10$tkINGOdINNST/TAeinPWiOkXAoMHBWl5aAjoCPZiIz52QkgL15hXO','diego','Player35','2023-05-01 14:58:43.456-03','2023-05-01 15:02:55.482-03'),
-	 ('snakes','$2b$10$QzsJAafaQQYu6eBQFE8StucbgyEKBteiP7QwPvXpLqHS8/DYm20.i','Player519',NULL,'2023-05-01 20:39:13.982-03','2023-05-01 20:39:13.982-03');
+	 ('bears','$2b$10$9t3or7xHIm9e5hes2trwjuMnej4NlMIpem5lMzXPmpeG0HHtXMCyu','Player0',NULL,'2023-05-01 23:49:45.74-03','2023-05-01 23:49:45.74-03'),
+	 ('dragons','$2b$10$AXmb7OYfjQbNJsf0ZvIk0Ok.JLhS5Znxn4h4BQ7KMlgnF8VZlrMfi','diego','Player555','2023-05-01 23:52:26.098-03','2023-05-01 23:52:26.098-03'),
+	 ('snakes','$2b$10$zmPZWNn0V9VuVmy4g1b7kelXXm3AkDaINt.6CwR/OOf.n/5yv7T2i','Player299',NULL,'2023-05-01 23:53:07.587-03','2023-05-01 23:53:07.587-03');
 
 INSERT INTO public.players ("name","level","rank",winrate,"clanId") VALUES
-	 ('Player0',200,8,82.0,NULL),
-	 ('Player1',617,3,24.0,1),
+	 ('Player0',200,8,82.0,1),
+	 ('Player1',617,3,24.0,NULL),
 	 ('Player2',571,7,84.0,NULL),
-	 ('Player3',162,5,38.0,2),
+	 ('Player3',162,5,38.0,NULL),
 	 ('Player4',873,1,63.0,NULL),
 	 ('Player5',42,10,47.0,NULL),
 	 ('Player6',80,7,15.0,NULL),
@@ -42,7 +42,7 @@ INSERT INTO public.players ("name","level","rank",winrate,"clanId") VALUES
 	 ('Player32',710,3,7.0,NULL),
 	 ('Player33',674,1,14.0,NULL),
 	 ('Player34',972,8,11.0,NULL),
-	 ('Player35',604,0,71.0,2),
+	 ('Player35',604,0,71.0,NULL),
 	 ('Player36',366,1,71.0,NULL),
 	 ('Player37',519,1,6.0,NULL),
 	 ('Player38',493,11,64.0,NULL),
@@ -275,7 +275,7 @@ INSERT INTO public.players ("name","level","rank",winrate,"clanId") VALUES
 	 ('Player244',440,3,53.0,NULL),
 	 ('Player245',278,2,24.0,NULL),
 	 ('Player246',614,0,88.0,NULL),
-	 ('Player247',856,6,30.0,NULL),
+	 ('Player247',856,6,30.0,2),
 	 ('Player248',498,0,52.0,NULL),
 	 ('Player249',859,8,29.0,NULL);
 INSERT INTO public.players ("name","level","rank",winrate,"clanId") VALUES
@@ -332,7 +332,7 @@ INSERT INTO public.players ("name","level","rank",winrate,"clanId") VALUES
 	 ('Player296',729,2,89.0,NULL),
 	 ('Player297',798,0,70.0,NULL),
 	 ('Player298',927,11,100.0,NULL),
-	 ('Player299',849,9,71.0,NULL);
+	 ('Player299',849,9,71.0,3);
 INSERT INTO public.players ("name","level","rank",winrate,"clanId") VALUES
 	 ('Player300',86,9,71.0,NULL),
 	 ('Player301',579,0,1.0,NULL),
@@ -380,7 +380,7 @@ INSERT INTO public.players ("name","level","rank",winrate,"clanId") VALUES
 INSERT INTO public.players ("name","level","rank",winrate,"clanId") VALUES
 	 ('Player340',104,4,49.0,NULL),
 	 ('Player341',209,7,60.0,NULL),
-	 ('Player342',695,5,52.0,NULL),
+	 ('Player342',695,5,52.0,1),
 	 ('Player343',477,8,10.0,NULL),
 	 ('Player344',380,8,71.0,NULL),
 	 ('Player345',892,10,16.0,NULL),
@@ -419,7 +419,7 @@ INSERT INTO public.players ("name","level","rank",winrate,"clanId") VALUES
 	 ('Player375',831,7,88.0,NULL),
 	 ('Player376',500,2,56.0,NULL),
 	 ('Player377',745,3,52.0,NULL),
-	 ('Player378',267,8,51.0,NULL),
+	 ('Player378',267,8,51.0,2),
 	 ('Player379',879,3,20.0,NULL);
 INSERT INTO public.players ("name","level","rank",winrate,"clanId") VALUES
 	 ('Player380',808,8,70.0,NULL),
@@ -445,7 +445,7 @@ INSERT INTO public.players ("name","level","rank",winrate,"clanId") VALUES
 	 ('Player399',997,9,20.0,NULL);
 INSERT INTO public.players ("name","level","rank",winrate,"clanId") VALUES
 	 ('Player400',453,10,75.0,NULL),
-	 ('Player401',686,1,60.0,NULL),
+	 ('Player401',686,1,60.0,3),
 	 ('Player402',449,0,87.0,NULL),
 	 ('Player403',631,3,60.0,NULL),
 	 ('Player404',21,4,96.0,NULL),
@@ -479,7 +479,7 @@ INSERT INTO public.players ("name","level","rank",winrate,"clanId") VALUES
 INSERT INTO public.players ("name","level","rank",winrate,"clanId") VALUES
 	 ('Player430',202,3,42.0,NULL),
 	 ('Player431',661,9,97.0,NULL),
-	 ('Player432',122,3,30.0,NULL),
+	 ('Player432',122,3,30.0,2),
 	 ('Player433',580,8,56.0,NULL),
 	 ('Player434',738,6,69.0,NULL),
 	 ('Player435',130,3,6.0,NULL),
@@ -501,7 +501,7 @@ INSERT INTO public.players ("name","level","rank",winrate,"clanId") VALUES
 INSERT INTO public.players ("name","level","rank",winrate,"clanId") VALUES
 	 ('Player450',620,6,25.0,NULL),
 	 ('Player451',497,6,68.0,NULL),
-	 ('Player452',121,0,9.0,NULL),
+	 ('Player452',121,0,9.0,1),
 	 ('Player453',453,8,74.0,NULL),
 	 ('Player454',544,9,58.0,NULL),
 	 ('Player455',464,10,34.0,NULL),
@@ -527,7 +527,7 @@ INSERT INTO public.players ("name","level","rank",winrate,"clanId") VALUES
 	 ('Player473',367,4,0.0,NULL),
 	 ('Player474',78,9,86.0,NULL),
 	 ('Player475',651,1,22.0,NULL),
-	 ('Player476',215,6,49.0,NULL),
+	 ('Player476',215,6,49.0,3),
 	 ('Player477',63,11,41.0,NULL),
 	 ('Player478',402,10,52.0,NULL),
 	 ('Player479',155,1,50.0,NULL);
@@ -552,15 +552,15 @@ INSERT INTO public.players ("name","level","rank",winrate,"clanId") VALUES
 	 ('Player496',196,1,52.0,NULL),
 	 ('Player497',171,0,23.0,NULL),
 	 ('Player498',621,7,4.0,NULL),
-	 ('Player499',582,1,36.0,1);
+	 ('Player499',582,1,36.0,NULL);
 INSERT INTO public.players ("name","level","rank",winrate,"clanId") VALUES
 	 ('Player500',374,6,81.0,NULL),
-	 ('Player501',453,4,10.0,3),
+	 ('Player501',453,4,10.0,NULL),
 	 ('Player502',187,2,68.0,NULL),
 	 ('Player503',855,7,39.0,NULL),
 	 ('Player504',642,1,0.0,NULL),
 	 ('Player505',239,8,62.0,NULL),
-	 ('Player506',230,8,52.0,NULL),
+	 ('Player506',230,8,52.0,2),
 	 ('Player507',16,9,32.0,NULL),
 	 ('Player508',863,6,16.0,NULL),
 	 ('Player509',725,11,31.0,NULL);
@@ -574,7 +574,7 @@ INSERT INTO public.players ("name","level","rank",winrate,"clanId") VALUES
 	 ('Player516',340,1,96.0,NULL),
 	 ('Player517',806,1,42.0,NULL),
 	 ('Player518',543,3,93.0,NULL),
-	 ('Player519',739,11,50.0,3);
+	 ('Player519',739,11,50.0,NULL);
 INSERT INTO public.players ("name","level","rank",winrate,"clanId") VALUES
 	 ('Player520',34,7,93.0,NULL),
 	 ('Player521',703,9,37.0,NULL),
@@ -595,27 +595,27 @@ INSERT INTO public.players ("name","level","rank",winrate,"clanId") VALUES
 	 ('Player535',997,3,49.0,NULL),
 	 ('Player536',760,6,11.0,NULL),
 	 ('Player537',35,3,76.0,NULL),
-	 ('Player538',326,9,89.0,NULL),
+	 ('Player538',326,9,89.0,1),
 	 ('Player539',470,6,43.0,NULL);
 INSERT INTO public.players ("name","level","rank",winrate,"clanId") VALUES
 	 ('Player540',631,7,33.0,NULL),
 	 ('Player541',721,6,81.0,NULL),
-	 ('Player542',981,10,5.0,NULL),
+	 ('Player542',981,10,5.0,2),
 	 ('Player543',996,8,12.0,NULL),
 	 ('Player544',164,7,68.0,NULL),
 	 ('Player545',641,9,60.0,NULL),
 	 ('Player546',246,0,93.0,NULL),
-	 ('Player547',618,1,9.0,NULL),
+	 ('Player547',618,1,9.0,3),
 	 ('Player548',37,10,50.0,NULL),
 	 ('Player549',434,5,58.0,NULL);
 INSERT INTO public.players ("name","level","rank",winrate,"clanId") VALUES
 	 ('Player550',710,1,28.0,NULL),
 	 ('Player551',578,3,95.0,NULL),
-	 ('Player552',551,11,24.0,NULL),
+	 ('Player552',551,11,24.0,3),
 	 ('Player553',574,0,79.0,NULL),
 	 ('Player554',690,1,9.0,NULL),
-	 ('Player555',991,6,44.0,NULL),
-	 ('Player556',833,3,31.0,NULL),
+	 ('Player555',991,6,44.0,2),
+	 ('Player556',833,3,31.0,2),
 	 ('Player557',231,7,2.0,NULL),
 	 ('Player558',979,6,70.0,NULL),
 	 ('Player559',743,2,98.0,NULL);
@@ -636,7 +636,7 @@ INSERT INTO public.players ("name","level","rank",winrate,"clanId") VALUES
 	 ('Player572',27,8,35.0,NULL),
 	 ('Player573',590,11,24.0,NULL),
 	 ('Player574',803,2,36.0,NULL),
-	 ('Player575',87,0,16.0,NULL),
+	 ('Player575',87,0,16.0,1),
 	 ('Player576',788,9,50.0,NULL),
 	 ('Player577',841,5,86.0,NULL),
 	 ('Player578',60,2,97.0,NULL),
@@ -657,7 +657,7 @@ INSERT INTO public.players ("name","level","rank",winrate,"clanId") VALUES
 	 ('Player591',464,2,13.0,NULL),
 	 ('Player592',349,9,22.0,NULL),
 	 ('Player593',823,9,34.0,NULL),
-	 ('Player594',692,0,1.0,NULL),
+	 ('Player594',692,0,1.0,2),
 	 ('Player595',403,0,85.0,NULL),
 	 ('Player596',791,0,82.0,NULL),
 	 ('Player597',14,10,55.0,NULL),
