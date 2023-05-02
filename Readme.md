@@ -85,7 +85,7 @@ bears:mustafa123
 
 - `GET clans/:id` : Obtiene los datos de un clan segun el id del clan, incluyendo los jugadores que pertenecen a el.
 
-- `POST clans/:id/create` : Crea un clan. Recibe un objeto con el valor `name` y `password`, el jugador que crea el clan pasa a tener dicho clan vinculado en la columna `clanId` de la base de datos y en el la tabla de clanes pasa a aparecer su nombre en la tabla `leader`.
+- `POST clans/:id/create` : Crea un clan tomando el `id` del **jugador**. Recibe un objeto con el valor `name` y `password`, el jugador que crea el clan pasa a tener dicho clan vinculado en la columna `clanId` de la base de datos y en el la tabla de clanes pasa a aparecer su nombre en la tabla `leader`.
 
   ```
   {
@@ -94,11 +94,7 @@ bears:mustafa123
   }
   ```
 
-  ```
-
-  ```
-
-- `POST clans/:id/join` : Permita unirse a un clan con una contraseña. Recibe un objeto con el valor `password` y `name`, una vez en el clan en la base de datos el jugador recibira un valor en la columna `clanId` que corresponde al id del clan al que se unio.
+- `POST clans/:id/join` : Permita unirse a un clan con una contraseña tomando el `id` del **jugador**. Recibe un objeto con el valor `password` y `name`, una vez unido al clan en la base de datos el jugador recibira un valor en la columna `clanId` que corresponde al id del clan al que se unio.
 
   ```
   {
@@ -107,7 +103,7 @@ bears:mustafa123
   }
   ```
 
-- `PUT clans/:id/co-leader` : Agrega un co-lider a un clan. Recibe un objeto con el valor `name`, el jugador que se agrega como co-lider pasa a tener dicho clan vinculado en la columna `clanId` de la base de datos y pasa a aparecer su nombre en la columna `coLeader` de la tabla `clans`. Se verifica si el jugador que realiza la solicitud es el lider del clan, en caso de no serlo se devuelve un error.
+- `PUT clans/:id/co-leader` : Agrega un co-lider a un clan tomando el `id` del **clan**. Recibe un objeto con el valor `name` y el nombre del jugador que va a ser asignado como co-lider, el jugador que se agrega como co-lider pasa a tener dicho clan vinculado en la columna `clanId` de la base de datos y pasa a aparecer su nombre en la columna `coLeader` de la tabla `clans`. Se verifica si el jugador que realiza la solicitud es el lider del clan, en caso de no serlo se devuelve un error.
 
   ```
   {
