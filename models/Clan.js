@@ -28,5 +28,7 @@ export const Clan = sequelize.define(
   },
   {
     timpestamps: false,
+    createdAt: false,
+    updatedAt: false,
   }
 );

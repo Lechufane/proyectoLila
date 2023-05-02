@@ -1,7 +1,7 @@
-INSERT INTO public.clans ("name","password",leader,"coLeader","createdAt","updatedAt") VALUES
-	 ('bears','$2b$10$9t3or7xHIm9e5hes2trwjuMnej4NlMIpem5lMzXPmpeG0HHtXMCyu','Player0',NULL,'2023-05-01 23:49:45.74-03','2023-05-01 23:49:45.74-03'),
-	 ('dragons','$2b$10$AXmb7OYfjQbNJsf0ZvIk0Ok.JLhS5Znxn4h4BQ7KMlgnF8VZlrMfi','diego','Player555','2023-05-01 23:52:26.098-03','2023-05-01 23:52:26.098-03'),
-	 ('snakes','$2b$10$zmPZWNn0V9VuVmy4g1b7kelXXm3AkDaINt.6CwR/OOf.n/5yv7T2i','Player299',NULL,'2023-05-01 23:53:07.587-03','2023-05-01 23:53:07.587-03');
+INSERT INTO public.clans ("name","password",leader,"coLeader") VALUES
+	 ('bears','$2b$10$9t3or7xHIm9e5hes2trwjuMnej4NlMIpem5lMzXPmpeG0HHtXMCyu','Player0',NULL),
+	 ('dragons','$2b$10$AXmb7OYfjQbNJsf0ZvIk0Ok.JLhS5Znxn4h4BQ7KMlgnF8VZlrMfi','diego','Player555'),
+	 ('snakes','$2b$10$zmPZWNn0V9VuVmy4g1b7kelXXm3AkDaINt.6CwR/OOf.n/5yv7T2i','Player299',NULL);
 
 INSERT INTO public.players ("name","level","rank",winrate,"clanId") VALUES
 	 ('Player0',200,8,82.0,1),

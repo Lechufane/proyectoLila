@@ -14,6 +14,15 @@ const pool = new Pool({
 });
 
 export class ClanController {
+  static async getClans(req, res) {
+    try {
+      const clans = await Clan.findAll();
+      res.json(clans);
+    } catch (error) {
+      res.status(500).json({ message: error.message });
+    }
+  }
+
   static async getLeader(req, res) {
     const { id } = req.params;
 
@@ -101,13 +110,9 @@ export class ClanController {
         return res.status(404).json({ message: "Player not found" });
       }
 
-      if (await bcrypt.compare(password, clan.password)) {
-        member.clanId = clan.id;
-        member.save();
-        res.json(member);
-      } else {
-        return res.status(404).json({ message: "Wrong password" });
-      }
+      member.clanId = clan.id;
+      member.save();
+      res.json(member);
     } catch (error) {
       res.status(500).json({ message: error.message });
     }
